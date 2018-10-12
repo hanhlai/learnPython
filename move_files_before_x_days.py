@@ -5,8 +5,6 @@
 # Version       : 1.1
 # Modifications : Added possibility to use command line arguments to specify source, destination, and days. 
 # Description   : This will move all the files from the src directory that are over 240 days old to the destination directory.
-# Update f parameter
-
 #Cập nhật f
 import shutil
 import sys
