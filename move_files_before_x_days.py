@@ -5,6 +5,7 @@
 # Version       : 1.1
 # Modifications : Added possibility to use command line arguments to specify source, destination, and days.
 # Description   : This will move all the files from the src directory that are over 240 days old to the destination directory.
+# Update f parameter
 
 import shutil
 import sys
@@ -38,19 +39,14 @@ if not os.path.exists(dst):
 
 for f in os.listdir(src):  # Loop through all the files in the source directory
     # Work out how old they are, if they are older than 240 days old
-    
+
     #print(src + "\\" + f)
     a = os.stat(src + "\\" + f).st_mtime
     b = now - days * 86400
-    #print(a)
-    #print(b)
-    #print(a < b)
-    
+
     if a < b:
-    #    print("a < b")
         c = os.path.isfile(src + "\\" + f)
-    #    print(c)
-        
+
         if os.path.isfile(src + "\\" + f):  # Check it's a file
-     #       print("Là c")
+
             shutil.move(src + "\\" + f, dst)  # Move the files
