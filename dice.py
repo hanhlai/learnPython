@@ -12,7 +12,7 @@ import random
 class Die(object):
   #A dice has a feature of number about how many sides it has when it's established,like 6.
   def __init__(self):
-    self.sides=8
+    self.sides=6
     
   """because a dice contains at least 4 planes.
   So use this method to give it a judgement when you need to change the instance attributes."""
@@ -31,6 +31,6 @@ class Die(object):
 
 d = Die()
 d1 = Die()
-d.set_sides(4)
-d1.set_sides(4)
+d.set_sides(8)
+d1.set_sides(8)
 print (d.roll(), d1.roll())
